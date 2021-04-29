@@ -4238,7 +4238,7 @@ PERL_CALLCONV const char*	Perl_langinfo8(const int item, int * utf8ness);
 #  if (defined(HAS_LOCALECONV) || defined(HAS_LOCALECONV_L))	       && (defined(USE_LOCALE_MONETARY) || defined(USE_LOCALE_NUMERIC))
 #    if defined(PERL_IN_LOCALE_C)
 #      if defined(USE_LOCALE)
-STATIC HV *	S_get_nl_item_from_localeconv(pTHX_ const struct lconv *lcbuf, const int item, const int unused);
+STATIC HV *	S_get_nl_item_from_localeconv(pTHX_ const struct lconv *lcbuf, const int item, const int locale_is_utf8);
 #define PERL_ARGS_ASSERT_GET_NL_ITEM_FROM_LOCALECONV	\
 	assert(lcbuf)
 #      endif

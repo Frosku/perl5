@@ -3265,7 +3265,7 @@ S	|const char*|my_langinfo_i|const int item			\
 S	|HV *	|get_nl_item_from_localeconv				\
 				|NN const struct lconv *lcbuf		\
                                 |const int item				\
-                                |const int unused
+                                |const int locale_is_utf8
 #      endif
 #  endif
 ST	|const char *|save_to_buffer|NULLOK const char * string	\
